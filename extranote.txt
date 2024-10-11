@@ -1,0 +1,151 @@
+< !-- < i class="fa-solid fa-bars" id = "menu-icon" ></ > -->
+// let menuIcon = document.querySelector('#menu-icon');
+// let navbar = document.querySelector('.nav_bar');
+
+// menuIcon.onclick = () => {
+//     menuIcon.classList.toggle('fa-x');
+//     navbar.classList.toggle('active')
+
+// }
+// window.onscroll = () => {
+
+//     //sticky navbar
+//     let header = document.querySelector('header');
+//     header.chilList.toggle('sticky', window.scrollY > 100);
+
+//     //remove toggle icon and navbar
+
+//     menuIcon.classList.remove('fa-x');
+//     navbar.classList.remove('active');
+// };
+/* #menu-icon {
+    display: none;
+    font-size: 25px;
+    background-color: #f5f5f6;
+    border-radius: 40%;
+    padding: 10px;
+} */
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo_container {
+        margin-left: 2%;
+    }
+
+    #menu-icon {
+        display: block;
+
+    }
+
+    .nav_bar {
+        flex-direction: column;
+        align-items: center;
+        min-width: auto;
+        width: 100%;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .nav_bar.active {
+        display: block;
+    }
+
+    .nav_bar a {
+        display: block;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    .search_bar {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .action_bar {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .myntra_home {
+        height: 35px;
+    }
+
+    .nav_bar a {
+        font-size: 10px;
+    }
+
+    #menu-icon {
+        display: block;
+
+    }
+
+    .search_icon {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .search_input {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .action_icon {
+        font-size: 20px;
+    }
+
+    .action_name {
+        font-size: 10px;
+    }
+} */
+
+
+// const dealday = [
+//     { image: "images/d1.jfif" },
+//     { image: "https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/23d64f3c-7855-473e-a4ee-8fca65a4270d1721730989440-Card_24.png" },
+//     { image: "https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/fc2e7ce6-abfb-4032-8eae-7e225ad6bdeb1721730989513-Card_41.png" },
+//     { image: "https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/7e55b74e-c597-449a-9e34-4bb1f29dc38b1721730989802-Card_42.png" },
+//     { image: "https://assets.myntassets.com/w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2024/7/23/bb069c76-f88b-497e-87a1-1d6e5dcff6761721730989672-Card_44.png" },
+//     { image: 'images/d6.webp' },
+//     { image: 'images/d7.webp' },
+//     { image: 'images/d8.jfif' },
+//     { image: 'images/d9.webp' },
+//     { image: 'images/d10.webp' }
+// ];
+
+// const container = document.getElementById('deal-container');
+
+// dealday.forEach(item => {
+//     const img = document.createElement('img');
+//     img.className = 'itemImg';
+//     img.src = item.image;
+//     img.alt = ''; // Optional: Add an alt text for accessibility
+//     container.appendChild(img);
+// });
+
+// function displayItemsOnHomePage() {
+//     let itemsContainerElement = document.querySelector('.deal-container');
+//     if (!itemsContainerElement) {
+//         return;
+//     }
+//     let innerHtml = '';
+//     dealday.forEach(item => {
+//         innerHtml += `
+//                     <div class="deal-container">
+//                         <img class="item-image" src="${item.image}" alt="item image">
+//                     </div>
+//                 `;
+//     });
+
+//     itemsContainerElement.innerHTML = innerHtml;
+// }
+//document.addEventListener('DOMContentLoaded', displayItemsOnHomePage);
