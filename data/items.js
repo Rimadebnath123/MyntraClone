@@ -51,7 +51,7 @@ const items = [
         item_name: 'macbook m1',
         original_price: 99999,
         current_price: 89999,
-        discount: 0,
+        discount: 10,
         return_period: 14,
         delivery_date: '10 Oct 2023',
         rating: {

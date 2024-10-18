@@ -95,7 +95,7 @@ function generateItemHTML(item) {
       <div class="price-container">
         <span class="current-price">Rs ${item.current_price}</span>
         <span class="original-price">Rs ${item.original_price}</span>
-        <span class="discount-percentage">(${item.discount_percentage}% OFF)</span>
+        <span class="discount-percentage">(${item.discount}% OFF)</span>
       </div>
       <div class="return-period">
         <span class="return-period-days">${item.return_period} days</span> return available
