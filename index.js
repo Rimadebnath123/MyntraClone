@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     category.forEach(item => {
         const img = document.createElement('img');
-        img.className = 'itemImg';
+        img.className = 'itemImg1';
         img.src = item.image;
         img.alt = ''; // Optional: Add an alt text for accessibility
         container.appendChild(img);
     });
 });
 
-// carousel.js
+// dealCarousel.js
 document.addEventListener('DOMContentLoaded', () => {
     const carouselInner = document.getElementById('carousel-inner');
 
