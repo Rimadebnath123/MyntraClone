@@ -19,8 +19,8 @@ function displayBagSummary() {
 
 
     bagItemObjects.forEach(bagItem => {
-        totalMRP += bagItem.original_price; 4
-        totalDiscount += bagItem.original_price - bagItem.current_price
+        totalMRP += bagItem.original_price; 
+      totalDiscount += bagItem.original_price - bagItem.current_price;
         totalItem++;
     })
 

@@ -1,3 +1,4 @@
+//category container
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('category-container');
 
