@@ -390,10 +390,11 @@ footer {
     }
 }
 
-.copyright {
+.copyright,
+.copyright1,
+.copyright2 {
     color: #4c4d51;
-    text-align: end;
-    padding: 15px;
+    padding: 0 15px;
 }
 
 /* Responsive styles */
