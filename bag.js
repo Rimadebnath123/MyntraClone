@@ -64,6 +64,17 @@ function loadBagItemObjects() {
     });
     console.log(bagItemObjects);
 }
+function loadBagItemObjects() {
+  console.log(bagItems);
+  bagItemObjects = bagItems.map(itemId => {
+    for (let i = 0; i < itemswomen.length; i++) {
+      if (itemId == itemswomen[i].id) {
+        return itemswomen[i];
+      }
+    }
+  });
+  console.log(bagItemObjects);
+}
 
 function displayBagItems() {
     let containerElement = document.querySelector('.bag-items-container');
