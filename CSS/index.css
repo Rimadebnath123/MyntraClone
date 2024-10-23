@@ -171,15 +171,6 @@ ul {
 }
 
 
-.items-container {
-    width: 80%;
-    margin: 50px 10%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-}
-
 .category_heading {
     text-transform: uppercase;
     color: #3e4152;
@@ -198,10 +189,6 @@ ul {
     justify-content: space-evenly;
 }
 
-.items-container {
-    margin: 10px;
-}
-
 .sale_item {
     width: 250px;
 }
@@ -209,11 +196,14 @@ ul {
 .items-container {
     width: 80%;
     margin: 50px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 
 }
-
 .item-container {
     width: 250px;
+    padding:10px;
 }
 
 .item-image {
