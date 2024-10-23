@@ -1,4 +1,4 @@
-const itemsmen = [
+const items = [
     {
         id: '001',
         image: '../images/1.jpg',
@@ -115,24 +115,6 @@ const itemsmen = [
         rating: {
             stars: 4.2,
             count: 5200,
-        },
-    }
-];
-
-const itemswomen = [
-    {
-        id: '009',
-        image: '../images/2.jpg',
-        company: 'Blue Heaven ',
-        item_name: 'Blue Heaven Festive Fair Tone Make Up Kit - Vanilla (10Pcs)',
-        original_price: 2599,
-        current_price: 1507,
-        discount: 42,
-        return_period: 14,
-        delivery_date: '10 Oct 2023',
-        rating: {
-            stars: 4.3,
-            count: 24,
         },
     }
 ];
