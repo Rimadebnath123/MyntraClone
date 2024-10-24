@@ -3,30 +3,30 @@ let bagItemObjects;
 onLoad();
 
 function onLoad() {
-    loadBagItemObjects();
-    displayBagItems();
-    displayBagSummary()
+  loadBagItemObjects();
+  displayBagItems();
+  displayBagSummary()
 
 }
 
 
 function displayBagSummary() {
-    let bagSummaryElement = document.querySelector(".bag-summary")
+  let bagSummaryElement = document.querySelector(".bag-summary")
 
-    let totalItem = 0
-    let totalMRP = 0
-    let totalDiscount = 0
+  let totalItem = 0
+  let totalMRP = 0
+  let totalDiscount = 0
 
 
-    bagItemObjects.forEach(bagItem => {
-        totalMRP += bagItem.original_price; 
-      totalDiscount += bagItem.original_price - bagItem.current_price;
-        totalItem++;
-    })
+  bagItemObjects.forEach(bagItem => {
+    totalMRP += bagItem.original_price;
+    totalDiscount += bagItem.original_price - bagItem.current_price;
+    totalItem++;
+  })
 
-    let totalamount = totalMRP - totalDiscount + 99
+  let totalamount = totalMRP - totalDiscount + 99
 
-    bagSummaryElement.innerHTML = `
+  bagSummaryElement.innerHTML = `
     <div class="bag-details-container">
     <div class="price-header">PRICE DETAILS (${totalItem} Items) </div>
     <div class="price-item">
@@ -53,38 +53,41 @@ function displayBagSummary() {
   `;
 }
 
+
 function loadBagItemObjects() {
-  console.log(bagItems);
+  console.log("Bag items:", bagItems);
+
   bagItemObjects = bagItems.map(itemId => {
-    for (let i = 0; i < items.length; i++) {
-      if (itemId == items[i].id) {
-        return items[i];
-      }
-    }
-    return null; // If no match is found, return null
-  }).filter(item => item !== null); // Filter out any null values
-  console.log(bagItemObjects);
+    console.log("Checking item ID:", itemId);
+    // Ensure that both `itemId` and `item.id` are treated as numbers
+    const foundItem = items.find(item => item.id === itemId);
+    console.log("Found item:", foundItem);
+    return foundItem || null; // Return the found item or null if not found
+  }).filter(item => item !== null); // Remove any null values from the result
+
+  console.log("Bag item objects:", bagItemObjects);
 }
 
 
 function displayBagItems() {
-    let containerElement = document.querySelector('.bag-items-container');
-    let innerHTML = '';
-    bagItemObjects.forEach(bagItem => {
-        innerHTML += generateItemHTML(bagItem);
-    });
-    containerElement.innerHTML = innerHTML;
+  let containerElement = document.querySelector('.bag-items-container');
+  let innerHTML = '';
+  bagItemObjects.forEach(bagItem => {
+    innerHTML += generateItemHTML(bagItem);
+  });
+  containerElement.innerHTML = innerHTML;
 }
+
 
 function removeFromBag(itemId) {
-    bagItems = bagItems.filter(bagItemId => bagItemId != itemId);
-    localStorage.setItem('bagItems', JSON.stringify(bagItems));
-    loadBagItemObjects();
-    displayBagIcon();
-    displayBagItems();
-    displayBagSummary()
-
+  bagItems = bagItems.filter(bagItemId => bagItemId !== itemId); // Use strict equality for comparison
+  localStorage.setItem('bagItems', JSON.stringify(bagItems));
+  loadBagItemObjects();
+  displayBagIcon();
+  displayBagItems();
+  displayBagSummary();
 }
+
 
 function generateItemHTML(item) {
   if (!item.image) {
@@ -94,7 +97,7 @@ function generateItemHTML(item) {
 
   return `<div class="bag-item-container">
         <div class="item-left-part">
-          <img class="bag-item-img" src="../${item.image}">
+         <img class="bag-item-img" src="${item.image}">
         </div>
         <div class="item-right-part">
           <div class="company">${item.company}</div>
