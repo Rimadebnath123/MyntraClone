@@ -183,9 +183,9 @@
     <script src="../data/items.js"></script>
 
     <script>
-        const womenItemsContainer = document.getElementById('kidsItems');
+        const kidsItemsContainer = document.getElementById('kidsItems');
         items.filter(item => item.id >= 72 && item.id <= 107).forEach(item => {
-            womenItemsContainer.innerHTML += `
+            kidsItemsContainer.innerHTML += `
                     <div class="item-container">
                         <img class="item-image" src="${item.image}" alt="${item.itemName}">
                         <div class="rating">

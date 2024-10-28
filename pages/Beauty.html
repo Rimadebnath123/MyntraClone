@@ -56,7 +56,7 @@
 
     </header>
     <main>
-        <div class="items-container2 mt-5" id="kidsItems">
+        <div class="items-container2 mt-5" id="beautyItems">
             <!-- Women items will be dynamically inserted here -->
         </div>
 
@@ -183,10 +183,10 @@
     <script src="../data/items.js"></script>
 
     <script>
-        const womenItemsContainer = document.getElementById('kidsItems');
-        items.filter(item => item.id >= 154 && item.id <= 200).forEach(item => {
+        const beautyItemsContainer = document.getElementById('beautyItems');
+        items.filter(item => item.id >= 154 && item.id <= 194).forEach(item => {
             const discount = Math.round(((item.original_price - item.current_price) / item.original_price) * 100);
-            womenItemsContainer.innerHTML += `
+            beautyItemsContainer.innerHTML += `
                     <div class="item-container">
                         <img class="item-image" src="${item.image}" alt="${item.itemName}">
                         <div class="rating">
@@ -197,7 +197,7 @@
                 <div class="price">
                 <span class="current-price">Rs ${item.current_price}</span>
                 <span class="original-price">Rs ${item.original_price}</span>
-                <span class="discount">(${item.discount}% OFF)</span>
+                <span class="discount">(${discount}% OFF)</span>
                 </div>
                         <button class="btn-add-bag" onclick="addToBag(${item.id})">Add to Bag</button>
                     </div>
