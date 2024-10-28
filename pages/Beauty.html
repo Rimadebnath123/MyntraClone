@@ -184,7 +184,8 @@
 
     <script>
         const womenItemsContainer = document.getElementById('kidsItems');
-        items.filter(item => item.id >= 151 && item.id <= 200).forEach(item => {
+        items.filter(item => item.id >= 154 && item.id <= 200).forEach(item => {
+            const discount = Math.round(((item.original_price - item.current_price) / item.original_price) * 100);
             womenItemsContainer.innerHTML += `
                     <div class="item-container">
                         <img class="item-image" src="${item.image}" alt="${item.itemName}">

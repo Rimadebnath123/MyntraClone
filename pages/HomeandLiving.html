@@ -184,7 +184,7 @@
 
     <script>
         const homelItemsContainer = document.getElementById('homelItems');
-        items.filter(item => item.id >= 108 && item.id <= 150).forEach(item => {
+        items.filter(item => item.id >= 108 && item.id <= 153).forEach(item => {
             const discount = Math.round(((item.original_price - item.current_price) / item.original_price) * 100);
             homelItemsContainer.innerHTML += `
                     <div class="item-container">
