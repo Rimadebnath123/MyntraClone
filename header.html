@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS357fHYAnvyZIqrnolaRs3MlCQO7PyKngEag&usqp=CAU"
         type="image/x-icon">
@@ -120,11 +120,6 @@
                 z-index: 10;
             }
 
-            .myntra_home {
-                left: 10px;
-                top: 15px;
-            }
-
             .navbar-collapse {
                 flex-direction: column;
                 align-items: center;
@@ -155,7 +150,7 @@
             .search_bar {
                 position: absolute;
                 top: 20px;
-                left: 220px;
+                left: 280px;
                 width: 30%;
             }
 
@@ -163,6 +158,77 @@
                 position: absolute;
                 top: 15px;
                 right: 20px;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .myntra_home {
+                left: 5px;
+                top: 20px;
+                height: 45px;
+                z-index: 10;
+            }
+
+            .navbar-toggler {
+                position: fixed;
+                left: 80px;
+                z-index: 100;
+            }
+
+            .search_bar {
+                position: fixed;
+                left: 135px;
+                min-width: 100px !important;
+            }
+
+            .action_bar {
+                position: fixed;
+                top: 15px;
+                right: 5px;
+                min-width: 150px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .myntra_home {
+                left: 15px;
+                top: 20px;
+            }
+
+            .navbar-toggler {
+                position: fixed;
+                left: 120px;
+                z-index: 100;
+            }
+
+            .search_bar {
+                position: fixed;
+                left: 95px;
+                top: 90px;
+            }
+
+            .navbar-collapse {
+                padding-top: 16px;
+            }
+
+            .action_bar {
+                position: fixed;
+                top: 15px;
+                right: 15px;
+                min-width: 150px;
+            }
+        }
+
+        @media (max-width: 344px) {
+            .navbar-toggler {
+                position: fixed;
+                left: 100px;
+            }
+
+            .search_bar {
+                position: fixed;
+                left: 65px;
+                top: 90px;
             }
         }
     </style>

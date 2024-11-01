@@ -105,7 +105,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
+    margin-top: 100px;
 }
 
 .item-container {
@@ -236,6 +236,7 @@ footer {
     background: #FAFBFC;
     display: flex;
     justify-content: space-evenly;
+    margin-left: 10px;
 }
 
 .footer_column {
@@ -308,7 +309,17 @@ footer {
     .container img {
         max-width: 100%;
         /* Increase the image size for larger screens */
-        transform: scale(1.2);
+        transform: scale(1);
         /* Scales the image up by 10% */
+    }
+}
+
+@media (max-width: 430px) {
+    .items-container {
+        margin-top: 130px;
+    }
+
+    .items-container1 {
+        margin-top: 130px;
     }
 }
