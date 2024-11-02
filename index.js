@@ -70,7 +70,6 @@ onLoad();
 function onLoad() {
     let bagItemsStr = localStorage.getItem('bagItems');
     bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
-    // displayItemsOnPage();
     displayBagIcon();
 }
 
@@ -86,22 +85,27 @@ function addToBag(itemId) {
 //         bagItemCountElement.style.visibility = 'visible';
 //         bagItemCountElement.innerText = bagItems.length;
 //     } else {
-//         bagItemCountElement.style.visibility = 'hidden';
+//         bagItemCountElement.style.visibility = "hidden";
 //     }
 // }
 
 function displayBagIcon() {
-    let bagItemCountElement = document.querySelector('.bag-item-count');
+    const bagIcon = document.getElementById('bag-icon');
 
-    if (bagItemCountElement) {  // Check if element exists
-        if (bagItems.length > 0) {
-            bagItemCountElement.style.visibility = 'visible';
-            bagItemCountElement.innerText = bagItems.length;
-        } else {
-            bagItemCountElement.style.visibility = 'hidden';
-        }
+    // Check if the bagIcon exists and if bagItems has items
+    if (bagIcon && bagItems.length > 0) {
+        bagIcon.style.display = 'block'; // Show the icon
+        bagIcon.innerText = bagItems.length;
+    } else if (bagIcon) {
+        bagIcon.style.display = 'none'; // Hide the icon
     } else {
-        console.error('Bag item count element not found');
+        console.warn("Bag icon element not found.");
     }
 }
+
+// Assuming this runs on load
+window.onload = function () {
+    displayBagIcon();
+};
+
 

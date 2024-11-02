@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         rel="stylesheet">
@@ -100,6 +100,23 @@
         .navbar-collapse {
             display: flex;
             justify-content: center;
+        }
+
+        .bag-item-count {
+            background-color: #f16565;
+            white-space: nowrap;
+            text-align: center;
+            line-height: 18px;
+            padding: 0 6px;
+            height: 18px;
+            position: relative;
+            border-radius: 50%;
+            font-size: 12px;
+            color: #fff;
+            left: 13px;
+            top: -44px;
+            font-weight: 700;
+            cursor: pointer;
         }
 
         @media (max-width: 1024px) {
@@ -301,7 +318,7 @@
                 <a class="action_container" href="../pages/bag.html">
                     <span class="material-symbols-outlined action_icon">shopping_bag</span>
                     <span class="action_name">Bag</span>
-                    <span class="bag-item-count">0</span>
+                    <span class="bag-item-count" id="bag-icon">0</span>
                 </a>
             </div>
         </nav>

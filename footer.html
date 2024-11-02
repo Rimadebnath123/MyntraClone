@@ -11,16 +11,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/index.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         rel="stylesheet">
     <title>Footer</title>
 </head>
+<style>
+    footer {
+        background: #FAFBFC;
+    }
+
+    .footer_container {
+        padding: 30px 0px 40px 0px;
+        background: #FAFBFC;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 10px;
+    }
+
+    .footer_column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_column h3 {
+        color: #090a0d;
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .footer_column a {
+        color: #54555b;
+        font-size: 15px;
+        text-decoration: none;
+        padding-bottom: 5px;
+    }
+
+    .footer_row {
+        width: 100%;
+        max-width: 1140px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .text-muted {
+        font-size: 14px;
+        text-decoration: none;
+
+    }
+
+    .text-dark {
+        font-size: 16px;
+
+    }
+
+    @media (max-width: 768px) {
+        .d-flex.flex-wrap {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .d-flex.flex-wrap span {
+            display: none;
+        }
+    }
+
+    .copyright,
+    .copyright1,
+    .copyright2 {
+        color: #4c4d51;
+        padding: 0 15px;
+    }
+</style>
 
 <body>
     <footer>
-        <div class="footer_container mt-5">
+        <div class="footer_container mt-5" id="footer-container">
             <div class="footer_column">
                 <h3>ONLINE SHOPPING</h3>
 
