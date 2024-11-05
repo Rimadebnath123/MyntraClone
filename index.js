@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //
 
-let bagItems;
+let bagItems = [];
 onLoad();
 
 function addToBag(itemId) {
@@ -96,9 +96,9 @@ function displayBagIcon() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    onLoad();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     onLoad();
+// });
 
 
 // Assuming this runs on load
