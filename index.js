@@ -91,8 +91,6 @@ function displayBagIcon() {
             bagIcon.innerText = '';
             console.log("Bag icon hidden"); // Debugging
         }
-    } else {
-        console.error("Bag icon element not found");
     }
 }
 
