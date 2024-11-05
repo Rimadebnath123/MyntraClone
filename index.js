@@ -67,41 +67,39 @@ document.addEventListener('DOMContentLoaded', () => {
 let bagItems;
 onLoad();
 
-function onLoad() {
-    let bagItemsStr = localStorage.getItem('bagItems');
-    bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
-    displayBagIcon();
-}
-
 function addToBag(itemId) {
     bagItems.push(itemId);
     localStorage.setItem('bagItems', JSON.stringify(bagItems));
     displayBagIcon();
 }
 
-// function displayBagIcon() {
-//     let bagItemCountElement = document.querySelector('.bag-item-count');
-//     if (bagItems.length > 0) {
-//         bagItemCountElement.style.visibility = 'visible';
-//         bagItemCountElement.innerText = bagItems.length;
-//     } else {
-//         bagItemCountElement.style.visibility = "hidden";
-//     }
-// }
+function onLoad() {
+    let bagItemsStr = localStorage.getItem('bagItems');
+    bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
+    displayBagIcon();
+}
 
 function displayBagIcon() {
     const bagIcon = document.getElementById('bag-icon');
-
-    // Check if the bagIcon exists and if bagItems has items
-    if (bagIcon && bagItems.length > 0) {
-        bagIcon.style.display = 'block'; // Show the icon
-        bagIcon.innerText = bagItems.length;
-    } else if (bagIcon) {
-        bagIcon.style.display = 'none'; // Hide the icon
+    if (bagIcon) {
+        if (bagItems.length > 0) {
+            bagIcon.style.display = 'block';
+            bagIcon.innerText = bagItems.length;
+            console.log("Bag icon shown with count:", bagItems.length); // Debugging
+        } else {
+            bagIcon.style.display = 'none';
+            bagIcon.innerText = '';
+            console.log("Bag icon hidden"); // Debugging
+        }
     } else {
-        console.warn("Bag icon element not found.");
+        console.error("Bag icon element not found");
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    onLoad();
+});
+
 
 // Assuming this runs on load
 window.onload = function () {
